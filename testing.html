@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ops-Vision | Retailer Analysis Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* HERO */
+.hero {
+    padding: 100px 10%;
+    background: linear-gradient(rgba(30,60,114,0.85), rgba(42,82,152,0.85)),
+                url('https://images.unsplash.com/photo-1556740749-887f6717d7e4') center/cover no-repeat;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #ffd700;
+    color: #333;
+}
+
+.btn-primary:hover {
+    background: white;
+}
+
+/* CAROUSEL */
+.carousel-section {
+    padding: 60px 10%;
+    background: white;
+    text-align: center;
+}
+
+.carousel-section h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.carousel img {
+    width: 100%;
+    display: none;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.carousel-buttons {
+    margin-top: 15px;
+}
+
+.carousel-buttons button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    background: #2a5298;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carousel-buttons button:hover {
+    background: #1e3c72;
+}
+
+/* FEATURES */
+.features {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+}
+
+.feature h4 {
+    margin-bottom: 15px;
+    color: #2a5298;
+}
+
+/* FOOTER */
+footer {
+    background: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ops-Vision</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Retail Intelligence. Simplified.</h2>
+    <p>
+        Ops-Vision empowers retailers with advanced analytics, real-time insights,
+        and operational visibility to maximize performance and profitability.
+    </p>
+    <a href="#" class="btn btn-primary">Request Demo</a>
+</section>
+
+<!-- IMAGE CAROUSEL -->
+<section class="carousel-section">
+    <h3>Retail Insights in Action</h3>
+
+    <div class="carousel">
+        <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db" class="active">
+        <img src="https://images.unsplash.com/photo-1515169067865-5387ec356754">
+        <img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d">
+        <img src="https://images.unsplash.com/photo-1572025442646-866d16c84a54">
+    </div>
+
+    <div class="carousel-buttons">
+        <button onclick="prevSlide()">Prev</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <h3>Why Choose Ops-Vision?</h3>
+    <div class="feature-grid">
+        <div class="feature">
+            <h4>📊 Real-Time Analytics</h4>
+            <p>Monitor sales and inventory with dynamic dashboards.</p>
+        </div>
+        <div class="feature">
+            <h4>📈 Performance Tracking</h4>
+            <p>Track KPIs across regions and store locations.</p>
+        </div>
+        <div class="feature">
+            <h4>🛒 Inventory Optimization</h4>
+            <p>Reduce stockouts with predictive inventory insights.</p>
+        </div>
+        <div class="feature">
+            <h4>🔍 Actionable Insights</h4>
+            <p>AI-powered recommendations for better decisions.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Ops-Vision. All Rights Reserved.
+</footer>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel img");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+            slide.classList.add("active");
+        }
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Auto slide every 4 seconds
+setInterval(nextSlide, 4000);
+</script>
+
+</body>
+</html>
